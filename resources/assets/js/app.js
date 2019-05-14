@@ -15,7 +15,22 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+import Vue from 'vue';
+import VueSweetalert2 from 'vue-sweetalert2';
+ 
+const options = {
+  confirmButtonColor: '#41b882',
+  cancelButtonColor: '#ff7674'
+}
+ 
+Vue.use(VueSweetalert2, options)
+
+Vue.component('navbar', 
+	require('./components/Navbar.vue'));
+Vue.component('articles', 
+	require('./components/Articles.vue'));
+
+
 
 const app = new Vue({
     el: '#app'
